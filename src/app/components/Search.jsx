@@ -44,7 +44,7 @@ function Search({ onSearch, parameterNames, jsonData }) {
           return paramValue.includes(param.value);
         }
         if (typeof paramValue === "number") {
-          return paramValue === parseFloat(param.value); // Convert search value to a number
+          return paramValue === parseFloat(param.value); 
         }
         return false;
       });
@@ -90,7 +90,7 @@ function Search({ onSearch, parameterNames, jsonData }) {
           </Button>
         </Grid>
       </Grid>
-      {filteredData && <JsonDisplay data={filteredData} />}
+      {filteredData.length >0  && <JsonDisplay data={filteredData} />}
     </Paper>
   );
 }

@@ -17,14 +17,14 @@ function SearchParameter({ param, onRemove, onInputChange, parameterNames }) {
         <Grid item xs={12} sm={4}>
           <TextField
             fullWidth
-            select // Change to a select field
+            select
             label="Parameter Name"
             name="name"
             value={param.name}
             onChange={handleInputChange}
           >
             {parameterNames.length === 0 && ( // Conditionally render placeholder
-              <MenuItem value="" disabled>
+              <MenuItem value="" disabled >
                 Please upload a JSON file 🥺
               </MenuItem>
             )}
